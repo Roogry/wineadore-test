@@ -215,11 +215,9 @@ class HomePage extends StatelessWidget {
           const SizedBox(height: 16),
 
           // Grapes
-          SizedBox(
-            height: 25,
-            child: ListView(
-              shrinkWrap: true,
-              scrollDirection: Axis.horizontal,
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
               children: [
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 4),
@@ -235,8 +233,9 @@ class HomePage extends StatelessWidget {
                     vertical: 4,
                   ),
                   decoration: BoxDecoration(
-                      borderRadius: Helper.getRadius(5),
-                      color: AppTheme.primaryBackground),
+                    borderRadius: Helper.getRadius(5),
+                    color: AppTheme.primaryBackground,
+                  ),
                   child: const KText(
                     text: 'Touriga Nacional (50%)',
                   ),
@@ -274,7 +273,7 @@ class HomePage extends StatelessWidget {
               text:
                   'The Ravasqueira Reserva da Família Red 2020 is a tribute to the José de Mello family and the result of an in-depth analysis of the vineyard in 2014, which resulted in the selection of the plots with the grape varieties that most stood out for their elegance, concentration, and character, the pillars of this Monte da Ravasqueira Reserve range',
               isOverflow: !isDescExpanded.value,
-              maxLines: !isDescExpanded.value? 3 : null,
+              maxLines: !isDescExpanded.value ? 3 : null,
             ),
           ),
           const SizedBox(height: 8),
@@ -380,7 +379,7 @@ class HomePage extends StatelessWidget {
               text:
                   'Dark, deep and opaque in colour, this wine is a clear reflection of the balance between the Touriga Nacional and the Syrah grape varieties. When tasted it presents ripe black fruit in healthy coexistence with vegetable, floral and spice notes. The ageing both in barrels and in the bottle has provided a fine structure profile with polished but present tannins, providing a tension in the mouth making it perfect for complex dishes.',
               isOverflow: !isTasteExpanded.value,
-              maxLines: !isTasteExpanded.value? 3 : null,
+              maxLines: !isTasteExpanded.value ? 3 : null,
             ),
           ),
           const SizedBox(height: 16),
@@ -496,7 +495,8 @@ class HomePage extends StatelessWidget {
             name: 'Sanchia Jodie',
             time: '10 days ago',
             rating: 4.5,
-            review: 'Very nice one. I bought it in supermarket, didn\'t know what to expect. But i love it. Bold, complex, full of black fruits and cloves',
+            review:
+                'Very nice one. I bought it in supermarket, didn\'t know what to expect. But i love it. Bold, complex, full of black fruits and cloves',
           ),
           const SizedBox(height: 16),
           const Divider(
@@ -507,7 +507,8 @@ class HomePage extends StatelessWidget {
             name: 'Komang Yoga',
             time: '22 days ago',
             rating: 4.0,
-            review: 'Beautiful deep color well balanced tannins, black fruit on the nose, hints of plum with a little spice. Great marriage between touriga national and syrah. Very well done reminds me of a french Bordeaux.',
+            review:
+                'Beautiful deep color well balanced tannins, black fruit on the nose, hints of plum with a little spice. Great marriage between touriga national and syrah. Very well done reminds me of a french Bordeaux.',
           ),
           const SizedBox(height: 16),
           const Divider(
@@ -530,7 +531,7 @@ class HomePage extends StatelessWidget {
     required String time,
     required double rating,
     required String review,
-  }){
+  }) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -579,7 +580,7 @@ class HomePage extends StatelessWidget {
       ],
     );
   }
-  
+
   Widget _bottomNav() {
     return SafeArea(
       child: Container(
