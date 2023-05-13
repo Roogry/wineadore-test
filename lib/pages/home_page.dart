@@ -268,11 +268,14 @@ class HomePage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          KText(
-            text:
-                'The Ravasqueira Reserva da Família Red 2020 is a tribute to the José de Mello family and the result of an in-depth analysis of the vineyard in 2014, which resulted in the selection of the plots with the grape varieties that most stood out for their elegance, concentration, and character, the pillars of this Monte da Ravasqueira Reserve range',
-            isOverflow: !isDescExpanded.value,
-            maxLines: 3,
+          InkWell(
+            onTap: () => isDescExpanded.value = !isDescExpanded.value,
+            child: KText(
+              text:
+                  'The Ravasqueira Reserva da Família Red 2020 is a tribute to the José de Mello family and the result of an in-depth analysis of the vineyard in 2014, which resulted in the selection of the plots with the grape varieties that most stood out for their elegance, concentration, and character, the pillars of this Monte da Ravasqueira Reserve range',
+              isOverflow: !isDescExpanded.value,
+              maxLines: !isDescExpanded.value? 3 : null,
+            ),
           ),
           const SizedBox(height: 8),
           RichText(
@@ -371,11 +374,14 @@ class HomePage extends StatelessWidget {
             color: AppTheme.secondaryText,
           ),
           const SizedBox(height: 8),
-          const KText(
-            text:
-                'Dark, deep and opaque in colour, this wine is a clear reflection of the balance between the Touriga Nacional and the Syrah grape varieties. When tasted it presents ripe black fruit in healthy coexistence with vegetable, floral and spice notes. The ageing both in barrels and in the bottle has provided a fine structure profile with polished but present tannins, providing a tension in the mouth making it perfect for complex dishes.',
-            isOverflow: true,
-            maxLines: 3,
+          InkWell(
+            onTap: () => isTasteExpanded.value = !isTasteExpanded.value,
+            child: KText(
+              text:
+                  'Dark, deep and opaque in colour, this wine is a clear reflection of the balance between the Touriga Nacional and the Syrah grape varieties. When tasted it presents ripe black fruit in healthy coexistence with vegetable, floral and spice notes. The ageing both in barrels and in the bottle has provided a fine structure profile with polished but present tannins, providing a tension in the mouth making it perfect for complex dishes.',
+              isOverflow: !isTasteExpanded.value,
+              maxLines: !isTasteExpanded.value? 3 : null,
+            ),
           ),
           const SizedBox(height: 16),
           _linearTaste(
