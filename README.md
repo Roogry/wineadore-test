@@ -1,16 +1,39 @@
-# wineadore
 
-A new Flutter project.
+# Wine Adore - Test Interview
 
-## Getting Started
+This repository contains a Flutter mobile application developed for the interview test at Wine Adore. The application focuses on showcasing a detailed product page for wines.
+## Demo
 
-This project is a starting point for a Flutter application.
+Product Detail page with description, winery detail, taste notes, food pairing, and reviews
 
-A few resources to get you started if this is your first Flutter project:
+![Demo Wine Adore](https://github.com/Roogry/wineadore-test/blob/main/assets/wineapp/demo.gif?raw=true)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+## Run Locally
+
+Open your terminal (Linux or macOS) or command prompt (Windows). Clone the project by run this command
+
+```bash
+  git clone https://gitlab.com/Roogry/wineadore-test.git
+```
+
+Go to the project directory
+
+```bash
+  cd wineadore-test
+```
+
+Install package
+
+```bash
+  flutter pub get
+```
+
+Start the app
+
+```bash
+  flutter run
+```
+
